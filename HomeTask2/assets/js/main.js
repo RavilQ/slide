@@ -29,17 +29,74 @@ let index = 0;
             
                 images[index].style.border="none";
             }
-    
+            if (sum==10) {
+              sum=0;
+            }
             sum++;
             
             bigimage.src = images[sum].src;
+           
             if (images[sum]=bigimage) {
                 images[sum].style.border="2px solid white";
             }
-            if (sum==images.length-1) {
-               sum=0;
+            if (sum==1) {
+              sum=11;
             }
-    
+            if (sum==11) {
+              
+              images[1].style="display:inline-block"
+              images[2].style="display:inline-block"
+              images[3].style="display:inline-block"
+              images[4].style="display:inline-block"
+              images[10].style="display:none"
+              images[9].style="display:none"
+              images[8].style="display:none"
+              images[7].style="display:none"
+              images[1].style.border="2px solid white";
+              index=0;
+              sum=1;
+            }
+            if (sum>=7) {
+
+              if (index < hdden.length) {
+                images[index+1].style="display:none"
+                images[index+7].style="display:inline-block"
+                images[index+7].style.border="2px solid white";
+                index++;
+            }
+        
+          
+               
+             
+
+
+
+            //   if (sum==images.length-1) {
+            //     images[1].style="display:inline-block"
+            //     images[2].style="display:inline-block"
+            //     images[3].style="display:inline-block"
+            //     images[4].style="display:inline-block"
+            //     images[10].style="display:none"
+            //     images[9].style="display:none"
+            //     images[8].style="display:none"
+            //     images[7].style="display:none"
+            //     images[1].style.border="2px solid white";
+            //     index=0;
+            //     sum=0;
+            // }
+            // else{
+            //   images[index+1].style="display:none"
+            //   images[index+7].style="display:inline-block"
+              
+            //   index++;
+            // }
+        
+            
+                
+                    
+               
+              
+            }
         
     }
 
@@ -148,19 +205,28 @@ for (const arrow of both) {
       if (sum > 0) {
         sum = sum - 1;
       } 
+      
      
 
       for (let index = 0; index <images.length; index++) {
         
         images[index].style.border="none";
     }
-
-
-      
+     
+    
+      console.log(sum);
       for (const image of images) {
         if (bigimage != image) {
-          bigimage.src = images[sum].src;
-          images[sum].style.border="2px solid white";
+            
+           if (sum==0) {
+            sum=images.length-1;
+           }
+           
+            bigimage.src = images[sum].src;
+            images[sum].style.border="2px solid white";
+            
+         
+         
         }
 
         // if (sum == 0) {
@@ -168,34 +234,59 @@ for (const arrow of both) {
         // }
       }
       
-      console.log(sum);
-      if (sum<=5) {
-         
+
+      
+     
+      if (sum<=4) {
         
+      
         if (index==1) {
             images[index].style="display:inline-block"
             images[images.length-4].style="display:none"
+            images[index].style.border="2px solid white";
             index--;
+           
         }
         if (index==2) {
             images[index].style="display:inline-block"
             images[images.length-3].style="display:none"
+            images[index].style.border="2px solid white";
             index--;
+            
         }
         if (index==3) {
             images[index].style="display:inline-block"
             images[images.length-2].style="display:none"
+            images[index].style.border="2px solid white";
             index--;
+            
         }
          
         if (index==4) {
             images[index].style="display:inline-block"
             images[images.length-1].style="display:none"
+            images[index].style.border="2px solid white";
             index--;
+            
         }
        
       }
-      
+      if (sum==images.length-1) {
+        sum=images.length-1;
+        images[1].style="display:none"
+        images[7].style="display:inline-block"
+       
+        images[2].style="display:none"
+        images[8].style="display:inline-block"
+       
+        images[3].style="display:none"
+        images[9].style="display:inline-block"
+        
+        images[4].style="display:none"
+        images[10].style="display:inline-block"
+        images[10].style.border="2px solid white";
+        index=4;
+      }
    
     }
   });
