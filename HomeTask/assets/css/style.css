@@ -1,0 +1,45 @@
+.yesik{
+    width: 300px;
+    height: 300px;
+    
+    margin: auto;
+    position:relative;
+    top: 100px;
+    border: 1px solid black;
+}
+.meyve{
+    width: 200px;
+    height: 200px;
+    
+    position: relative;
+    right: 100px;
+    border: 1px solid black;
+}
+.terevez{
+    width: 200px;
+    height: 200px;
+    
+    position: relative;
+    left: 100px;
+    border: 1px solid black;
+}
+.contain{
+    margin-left: 590px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 250px;
+}
+img{
+    width: 50px;
+    height: 50px;
+}
+.P1{
+    position: relative;
+    right: 230PX;
+    top: 200px;
+}
+.p2{
+    position: relative;
+    top: 200px;
+    right: 30px;
+}
